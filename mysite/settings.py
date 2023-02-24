@@ -74,14 +74,18 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mcrhorke_edatuzen_db',
-        'USER':'mcrhorke_edatuzen_db',
-        'PASSWORD':'Taitacg@006.',
-        'HOST':'198.23.62.74',
-        'PORT':'3306'
+        'NAME': os.getenv("DB_NAME"),
+        'USER':os.getenv("USER"),
+        'PASSWORD':os.getenv("PASSWORD"),
+        'HOST':os.getenv("HOST"),
+        'PORT':os.getenv("PORT")
     }
 }
 # DATABASES = {

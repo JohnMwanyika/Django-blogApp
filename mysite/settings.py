@@ -74,30 +74,30 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-from dotenv import load_dotenv
-import os
+# from dotenv import load_dotenv
+# import os
 
-load_dotenv()
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv("DB_NAME"),
-        'USER':os.getenv("USER"),
-        'PASSWORD':os.getenv("PASSWORD"),
-        'HOST':os.getenv("HOST"),
-        'PORT':os.getenv("PORT")
-    }
-}
+# load_dotenv()
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'blog_db',
-#         'USER':'mwanyika',
-#         'PASSWORD':'12345678Admin.',
-#         'HOST':'127.0.0.1',
-#         'PORT':'3306'
+#         'NAME': os.getenv("DB_NAME"),
+#         'USER':os.getenv("USER"),
+#         'PASSWORD':os.getenv("PASSWORD"),
+#         'HOST':os.getenv("HOST"),
+#         'PORT':os.getenv("PORT")
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blog_db',
+        'USER':'mwanyika',
+        'PASSWORD':'12345678Admin.',
+        'HOST':'127.0.0.1',
+        'PORT':'3306'
+    }
+}
 
 
 # Password validation

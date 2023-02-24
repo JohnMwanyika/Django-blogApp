@@ -77,13 +77,23 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog_db',
-        'USER':'mwanyika',
-        'PASSWORD':'12345678Admin.',
-        'HOST':'127.0.0.1',
+        'NAME': 'mcrhorke_edatuzen_db',
+        'USER':'mcrhorke_edatuzen_db',
+        'PASSWORD':'Taitacg@006.',
+        'HOST':'198.23.62.74',
         'PORT':'3306'
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'blog_db',
+#         'USER':'mwanyika',
+#         'PASSWORD':'12345678Admin.',
+#         'HOST':'127.0.0.1',
+#         'PORT':'3306'
+#     }
+# }
 
 
 # Password validation

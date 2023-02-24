@@ -14,21 +14,26 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
   </head>
   <body>
     <header class="page-header">
       <div class="container">
-          <h1><a href="/">Django Girls Blog</a></h1>
+        <a href="{% url 'post_new' %}" class="top-menu">
+          {% comment %} {% include './icons/file-earmark-plus.svg' %} {% endcomment %}
+          <i class="bi bi-file-earmark-plus"></i>
+        </a>
+        <h1><a href="/">Django Girls Blog</a></h1>
       </div>
     </header>
     <main class="container">
-        <div class="row">
-            <div class="col">
+      <div class="row">
+        <div class="col">
             {% block content %}
             {% endblock %}
-            </div>
         </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

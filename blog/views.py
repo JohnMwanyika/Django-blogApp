@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from django.utils import timezone
@@ -21,7 +22,7 @@ def post_detail(request, pk):
 
 # get the new blog form
 
-
+@login_required
 def post_new(request):
     if request.method == 'POST':
         form = PostForm(request.POST)
@@ -35,7 +36,7 @@ def post_new(request):
         form = PostForm()
         return render(request, 'blog/post_edit.html', {'form': form})
 
-
+@login_required
 def post_edit(request, pk):
     # get post by id
     post = get_object_or_404(Post, pk=pk)

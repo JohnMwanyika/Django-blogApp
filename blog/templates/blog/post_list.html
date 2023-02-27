@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block content %} 
+<h1 class="text-primary border-bottom">Featured Posts</h1>
     {% for post in posts %}
         <article class="post">
             <time class="date"> {{ post.published_date }} </time>

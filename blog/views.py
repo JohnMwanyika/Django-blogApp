@@ -68,3 +68,9 @@ def unpublish_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.unpublish()
     return redirect('post_draft_list')
+
+@login_required
+def delete_post(request,pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.delete()
+    return redirect('post_list')
